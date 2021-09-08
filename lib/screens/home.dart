@@ -160,6 +160,20 @@ class _HomeState extends State<Home> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SectionTitle(("Popular Menu" != null ) ? "Popular Menu"  : ''),
+                      TextButton(child:
+                      SeeAllText(("See More"  != null ) ? "See More" : ''),
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AllRestorents()));
+                        },),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.880,
                     height: MediaQuery.of(context).size.height * 0.120,
